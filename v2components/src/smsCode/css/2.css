@@ -1,0 +1,20 @@
+.rn-sms-input-container{
+	width:64%;
+	padding:0 1rem;
+	margin:0 auto;
+	border:1px solid #ddd;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.rn-sms-input-container label{
+	display: none;
+}
+.rn-sms-input-container .sms-input-clear{
+	display: none;
+}
+.rn-sms-input-container .sms-input-error{
+	display: none;
+}
+.rn-sms-input-container .sms-code-retry-text{
+	padding:0;
+}

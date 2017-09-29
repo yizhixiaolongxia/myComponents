@@ -1,0 +1,87 @@
+.cl_bbb{color:#bbb !important;}
+.cl_49{color:#49a6ff !important;}
+.sms-input-container{
+	background: #fff;
+	border: 0 solid #fff;
+    border-color: #ddd;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    -webkit-border-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAAtSURBVAiZY7x79+5/BjTAwsDAwKCkpMQIE7h3795/JnRVDAwMDFgFWWBakAUBsY8LPeRJskUAAAAASUVORK5CYII=) 2 stretch;
+    padding:.5rem 0 0 1.5rem;
+    margin-top: -1px;
+    font-size: 1.4rem;
+}
+.sms-input{
+	display: -webkit-box;
+	height: 3.4rem;
+	-webkit-box-align:center;
+}
+.sms-input-container label{
+	display: block;
+	width: 7.5rem;
+}
+.s17{
+    -webkit-box-flex:1;
+}
+.sms-input-container input{
+	display: block;
+	font-size: 1.4rem;
+    height: 3.4rem;
+    outline:none;
+    border: none;
+}
+.sms-input-container input::-webkit-input-placeholder {
+    color: #bbb
+}
+.sms-code-retry-text{
+	padding:0 1.5rem 0 .5rem;
+}
+.sms-input-clear{
+    opacity:0;
+    width: 3.4rem;
+    height: 3.4rem;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: end;
+}
+.sms-input-clear i{
+	position: relative;
+    display: block;
+    width: 1.4rem;
+    height: 1.4rem;
+    -webkit-border-radius: 1.4rem;
+    border-radius: 1.4rem;
+    background: #b7b7b7;
+}
+.sms-input-clear i:before,.sms-input-clear i:after {
+    content: '';
+    width: .8rem;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.sms-input-clear i:after {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.sms-input-error{
+	position: relative;
+	top:1px;
+	height: 1.6rem;
+    line-height: 1rem;
+    font-size: 1rem;
+    color: #f22d47;
+    border-bottom:1px solid #f22d47
+}
+.error_none{
+	height: 0.5rem;
+	opacity: 0;
+	overflow: hidden;
+}
+.opacity100 {
+    opacity: 1;
+}

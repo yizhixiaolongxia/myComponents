@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Title</title>
+    <style>
+    *{margin: 0;padding:0;list-style: none;}
+        html{
+            font-size: 10px;
+        }
+        body {
+            padding: 20px 0;
+            width: 100%;
+        }
+        .btn{
+            text-align: center;
+            line-height: 4.4rem;
+            background: #EB5603;
+            color: #fff;
+            font-size: 1.6rem;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 1.5rem;
+        }
+        .mt15{
+            margin-top: 1.5rem;
+        }
+        .btn.no_click {
+            opacity: .4;
+            background: #EB5603;
+        }
+    </style>
+    <style>
+        #div1{
+            width:100%;
+            height:60px;
+            background:#FF0000;
+        }
+        #div2{
+            width:100%;
+            height: 3rem;
+            background:#FFFF00;
+            text-align:right;
+
+            /*位移x轴上的值＊*/
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <base-input :async-value='"RT"' v-on:correct='r1' v-on:error='r2'></base-input>
+    <credit-input v-on:blur="t9" v-on:focus="t9" v-on:clear="t9" :label-text='"信用卡A"'></credit-input>
+    <cvv2-input></cvv2-input>
+    <amt-input ref="amtInput"
+               v-on:correct="amtOK"
+               v-on:incorrect="amtFail"
+               v-bind:placeholder="placeholder"
+               v-bind:err-msg="errMsg"
+               v-bind:max-amt="maxAmt"
+               v-bind:max-msg="gtMaxMsg">
+    </amt-input>
+    <cvv2-input :init-value='"321"' :label-text='"只读安全码"' :readonly='true'></cvv2-input>
+    <validity-input v-on:correct='r3'></validity-input>
+    <idcard-input></idcard-input>
+    <mobile-input>
+        <div>pic</div><!-- 输入框一行slot里边自定义的小元素，样式在自己项目里 -->
+    </mobile-input>
+    <blank-input></blank-input>
+    <mine></mine>
+    <date-chooser ref="dateChooser" :start='"2011,6,21"' :callback="r9"></date-chooser>
+    <password-input :strong-mode="T" :success="w33"></password-input>
+    <button @click="tg">密码强度切换</button>
+    <sms-input :init-time="9" :send-fuc="sendSmsCode"></sms-input>
+    <sms-input :auto-send="false"></sms-input>
+    <swipe-delete ref="t01" v-for="n in Y" :click-callback="c12">
+        <p id="div1" slot="content">卡片内存{{n}}</p>
+        <div id="div2" @click="del()" slot="button">点哈{{n}}</div>
+    </swipe-delete>
+
+    {{passwordTest}}
+    <div class="btn mt15" :class='btnDisable' v-on:click="openC">打开日期组件</div>
+     {{A}}
+     {{B}}
+     {{RT}}
+    {{mb}}
+</div>
+<script src="vue.js"></script>
+<script src="../build/components.js"></script>
+<script src="../build/example.js"></script>
+</body>
+</html>

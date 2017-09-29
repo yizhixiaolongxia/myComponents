@@ -1,0 +1,177 @@
+.data_input {
+  float: right;
+  width: 68%;
+  line-height: 0.6rem;
+  font-size: 0.28rem;
+  text-align: left;
+}
+.data_input.this_holder {
+  color: #b0b0b0;
+}
+.date_mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99998;
+
+  background: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.birth_date_pop_one {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 99999;
+
+  width: 100%;
+  height: 254px;
+  background: #fff;
+  display: none;
+  -webkit-transform: translate3d(0, 200px, 0);
+  -webkit-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+}
+.birth_date_pop_one * {
+  -webkit-backface-visibility: hidden;
+}
+.birth_date_pop_one.animate_hide {
+  transition: all 0.2s linear;
+  -webkit-transform: translate3d(0, 200px, 0);
+  transform: translate3d(0, 200px, 0);
+}
+.birth_date_pop_one.animate_show {
+  transition: all 0.2s linear;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.birth_date_pop_one:before,
+.birth_date_pop_one:after {
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  content: "";
+  width: 100%;
+  height: 90px;
+  pointer-events: none;
+}
+.birth_date_pop_one:before {
+  top: 44px;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.birth_date_pop_one:after {
+  bottom: 0;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 100%);
+}
+.birth_date_pop_one dt {
+  height: 44px;
+  background: #f7f7f7;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  /*border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;*/
+}
+.birth_date_pop_one dt i {
+  text-align: center;
+  font-size: 16px;
+  display: block;
+  font-style: normal;
+  color: #49a6ff;
+}
+.birth_date_pop_one dt i:nth-child(1),
+.birth_date_pop_one dt i:nth-child(3) {
+  width: 70px;
+  margin: 0 5px;
+  line-height: 30px;
+  /*border: 1px solid #ddd;
+  background: #f8f8f8;
+  font-weight: bold;
+  -webkit-border-radius: 3px;*/
+}
+.birth_date_pop_one dt i:nth-child(2) {
+  width: 0;
+  -webkit-box-flex: 1;
+}
+.birth_date_pop_one dd {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.birth_date_pop_one dd:nth-child(2) {
+  top: 50px;
+  z-index: 1;
+  height: 210px;
+  background: #fff;
+  color: #bbb;
+  /*-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.9);*/
+}
+.birth_date_pop_one dd ul {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.birth_date_pop_one dd ul:nth-of-type(1) {
+  left: 0;
+}
+.birth_date_pop_one dd ul:nth-of-type(1) li {
+  text-align: center;
+}
+.birth_date_pop_one dd ul:nth-of-type(2) {
+  left: 34%;
+}
+.birth_date_pop_one dd ul:nth-of-type(2) li {
+  text-align: center;
+}
+.birth_date_pop_one dd ul:nth-of-type(3) {
+  left: 67%;
+}
+.birth_date_pop_one dd ul:nth-of-type(3) li {
+  text-align: center;
+}
+.birth_date_pop_one dd ul li {
+  line-height: 30px;
+  height: 30px;
+  font-size: 14px;
+}
+.birth_date_pop_one dd:nth-child(3) {
+  top: 139px;
+  z-index: 5;
+  height: 30px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  pointer-events: none;
+  background: #fff;
+}
+.birth_date_pop_one dd:nth-child(3) ul {
+  pointer-events: none;
+  background: #fff;
+}
+.birth_date_pop_one dd:nth-child(3) ul li {
+  color: #000 !important;
+  pointer-events: none;
+  font-size: 16px;
+}
+.birth_date_pop_one .month_tip{
+  width: 12%;
+  text-align: right;
+  left: 31%;
+  position: absolute;
+  line-height: 30px;
+  font-size: 18px;
+}
+.birth_date_pop_one .year_tip{
+  width: 12%;
+  text-align: left;
+  right: 18%;
+  position: absolute;
+  line-height: 30px;
+  font-size: 18px;
+}
+.birth_date_pop_one .space_tip{
+  width: 2%;
+  text-align: center;
+  left: 48%;
+  position: absolute;
+  line-height: 30px;
+}

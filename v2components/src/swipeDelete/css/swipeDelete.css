@@ -1,0 +1,22 @@
+﻿.zs-parent-drag {
+    position: relative;
+    /*margin: 1rem;*/
+    min-height: 5rem;
+}
+.zs-child-drag {
+    width:100%;
+    height: auto;
+    position: relative;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    z-index: 9;
+}
+.zs-parent-drag .zs-swipe-button {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    top:0;
+    right: 10px;
+    border-radius: 0 4px 4px 0;
+    background: #ebebf2;
+}
